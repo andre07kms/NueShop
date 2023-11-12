@@ -18,7 +18,7 @@ class LoginController extends Controller
             'password.required' => 'Ocampo senha é obrigatório'
         ]);
 
-        if(Auth::attempt($credenciais, $request->remember )) {
+        if(Auth::attempt($credenciais, $request->rmber )) {
             $request->session()->regenerate();
             return redirect()->intended(route('admin.dashboard'));
         } else {
